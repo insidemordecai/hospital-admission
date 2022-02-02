@@ -1,0 +1,137 @@
+<!-- QUESTION: Create a form to admit patients in a hospital; use external css to style it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Admission Form</title>
+  <link rel="stylesheet" href="css/hospitalform-styles.css">
+</head>
+
+<body>
+
+  <h1>Hospital Admission Form</h1>
+
+  <form action="#">
+
+    <!-- Doctor's Section -->
+    <div>
+      <label>Doctor's Name</label> <br>
+      <input class="inputField" type="text" name="doctorFName" placeholder="First Name">
+      <input class="inputField" type="text" name="doctorLName" placeholder="Last Name">
+    </div>
+
+    <div>
+      <label>Admission Date</label> <br>
+      <input class="inputField" type="date" name="admissionDate">
+    </div>
+
+    <div>
+      <label>Planned Procedure</label> <br>
+      <input class="inputField" type="text" name="plannedProcedure" placeholder="Knee Surgery...">
+    </div>
+
+    <!-- Patient Section -->
+    <h3>Patient Information</h3>
+
+    <div>
+      <label>Patient Name</label> <br>
+      <input class="inputField" type="text" name="patientFName" placeholder="First Name">
+      <input class="inputField" type="text" name="patientLName" placeholder="Last Name">
+    </div>
+
+    <div>
+      <label>Date of Birth</label> <br>
+      <input class="inputField" type="date" name="dob">
+    </div>
+
+    <div>
+      <label>Gender</label> <br>
+      <input id="female" type="radio" name="gender" value="female">
+      <label for="female">Female</label>
+      <input id="male" type="radio" name="gender" value="male">
+      <label for="male">Male</label>
+    </div>
+
+    <div>
+      <label>The patient under the age of 18 years?</label> <br>
+      <input id="yes" type="radio" name="ageGroup" value="yes">
+      <label for="yes">Yes</label>
+      <input id="no" type="radio" name="ageGroup" value="no">
+      <label for="no">No</label>
+    </div>
+
+    <div>
+      <label>Email</label> <br>
+      <input class="inputField" type="email" name="patientEmail" placeholder="johndoe@example.com">
+    </div>
+
+    <div>
+      <label>Phone Number</label> <br>
+      <input class="inputField" type="tel" name="patientPhoneNumber" placeholder="+254 712 345 678">
+    </div>
+
+    <div>
+      <label>Which one(s) do you prefer to be contacted by:</label> <br>
+      <input id="phone" type="checkbox" name="preferredContactMethod" value="phone">
+      <label for="phone">Phone</label>
+      <input id="sms" type="checkbox" name="preferredContactMethod" value="sms">
+      <label for="sms">SMS</label>
+      <input id="email" type="checkbox" name="preferredContactMethod" value="email">
+      <label for="email">Email</label>
+    </div>
+
+    <!-- Kin Section -->
+    <h3>Next of Kin/Contact Person</h3>
+
+    <div>
+      <label>Name</label> <br>
+      <input class="inputField" type="text" name="kinFName" placeholder="First Name">
+      <input class="inputField" type="text" name="kinLName" placeholder="Last Name">
+    </div>
+
+    <div>
+      <label>Relationship to Patient</label> <br>
+      <input class="inputField" type="text" name="kinRelationship" placeholder="Mother, Father, Son, Daughter, etc.">
+    </div>
+
+    <div>
+      <label>Email</label> <br>
+      <input class="inputField" type="email" name="kinEmail" placeholder="johndoe@example.com">
+    </div>
+
+    <div>
+      <label>Phone Number</label> <br>
+      <input class="inputField" type="tel" name="kinPhoneNumber" placeholder="+254 712 345 678">
+    </div>
+
+    <!-- Final Section -->
+    <h3>Agreement</h3>
+
+    <div>
+      <input type="checkbox" name="tsandcs" value="tsandcs">
+      <label>I agree to Terms and Conditions</label>
+    </div>
+
+    <div>
+      <label>Today's Date</label> <br>
+      <input class="inputField" type="date" name="todaysDate">
+    </div>
+
+    <div>
+      <label>Signature</label> <br>
+      <textarea name="signature"
+        rows="3"> I, [PATIENT NAME] confirm that the information provided is accurate. </textarea>
+    </div>
+
+    <div>
+      <input id="submitButton" type="submit" value="Submit">
+    </div>
+  </form>
+
+</body>
+
+</html>
