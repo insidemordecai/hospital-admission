@@ -1,4 +1,5 @@
 <!-- QUESTION: Create a form to admit patients in a hospital; use external css to style it. -->
+<!-- EXTRA Q: fetch form data using php -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +16,9 @@
 
   <h1>Hospital Admission Form</h1>
 
-  <form action="#">
+  <form action="formdata.php" method="post">
 
-    <!-- Doctor's Section -->
+    <!-- Basic Info Section -->
     <div>
       <label>Doctor's Name</label> <br>
       <input class="inputField" type="text" name="doctorFName" placeholder="First Name">
@@ -45,7 +46,7 @@
 
     <div>
       <label>Date of Birth</label> <br>
-      <input class="inputField" type="date" name="dob">
+      <input class="inputField" type="date" name="patientDOB">
     </div>
 
     <div>
@@ -57,11 +58,11 @@
     </div>
 
     <div>
-      <label>The patient under the age of 18 years?</label> <br>
-      <input id="yes" type="radio" name="ageGroup" value="yes">
-      <label for="yes">Yes</label>
-      <input id="no" type="radio" name="ageGroup" value="no">
-      <label for="no">No</label>
+      <label>Age Group</label> <br>
+      <input id="adult" type="radio" name="ageGroup" value="adult">
+      <label for="adult">Over 18</label>
+      <input id="minor" type="radio" name="ageGroup" value="minor">
+      <label for="minor">Under 18</label>
     </div>
 
     <div>
@@ -112,8 +113,8 @@
     <h3>Agreement</h3>
 
     <div>
-      <input type="checkbox" name="tsandcs" value="tsandcs">
-      <label>I agree to Terms and Conditions</label>
+      <input id="tsandcs" type="checkbox" name="tsandcs" value="agreed">
+      <label for="tsandcs">I agree to Terms and Conditions</label>
     </div>
 
     <div>
@@ -123,12 +124,11 @@
 
     <div>
       <label>Signature</label> <br>
-      <textarea name="signature"
-        rows="3"> I, [PATIENT NAME] confirm that the information provided is accurate. </textarea>
+      <textarea name="signature" rows="3" placeholder="I, [PATIENT NAME] confirm that the information provided is accurate."></textarea>
     </div>
 
     <div>
-      <input id="submitButton" type="submit" value="Submit">
+      <input id="submitButton" type="submit" value="Submit" name="submit">
     </div>
   </form>
 
