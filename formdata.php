@@ -40,9 +40,9 @@ if (isset($_POST["submit"])) {
   echo "DOB: $patientDOB <br>";
   echo "Gender: $gender <br>";
   if($ageGroup == "adult"){
-    echo "Age Group: Patient is over 18 <br>";
+    echo "Age Group: Over 18 <br>";
   } else if ($ageGroup == "minor"){
-    echo "Age Group: Patient is under 18 <br>";
+    echo "Age Group: Under 18 <br>";
   } else {
     echo "Age Group: Undefined <br>";
   }
