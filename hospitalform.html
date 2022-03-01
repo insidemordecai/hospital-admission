@@ -19,10 +19,16 @@
   <form action="formdata.php" method="post">
 
     <!-- Basic Info Section -->
-    <div>
-      <label>Doctor's Name</label> <br>
-      <input class="inputField" type="text" name="doctorFName" placeholder="First Name">
-      <input class="inputField" type="text" name="doctorLName" placeholder="Last Name">
+    <div class="flex-container">
+      <div class="flex-child">
+        <label>Doctor's Name</label> <br>
+        <input class="inputField" type="text" name="doctorName" placeholder="John Doe">
+      </div>
+
+      <div class="flex-child">
+        <label>Planned Procedure</label> <br>
+        <input class="inputField" type="text" name="plannedProcedure" placeholder="Knee Surgery...">
+      </div>
     </div>
 
     <div>
@@ -30,18 +36,12 @@
       <input class="inputField" type="date" name="admissionDate">
     </div>
 
-    <div>
-      <label>Planned Procedure</label> <br>
-      <input class="inputField" type="text" name="plannedProcedure" placeholder="Knee Surgery...">
-    </div>
-
     <!-- Patient Section -->
     <h3>Patient Information</h3>
 
     <div>
       <label>Patient Name</label> <br>
-      <input class="inputField" type="text" name="patientFName" placeholder="First Name">
-      <input class="inputField" type="text" name="patientLName" placeholder="Last Name">
+      <input class="inputField" type="text" name="patientName" placeholder="John Doe">
     </div>
 
     <div>
@@ -51,73 +51,74 @@
 
     <div>
       <label>Gender</label> <br>
-      <input id="female" type="radio" name="gender" value="female">
-      <label for="female">Female</label>
-      <input id="male" type="radio" name="gender" value="male">
+      <input id="male" type="radio" name="gender" value="Male">
       <label for="male">Male</label>
+      <input id="female" type="radio" name="gender" value="Female">
+      <label for="female">Female</label>
     </div>
 
-    <div>
-      <label>Email</label> <br>
-      <input class="inputField" type="email" name="patientEmail" placeholder="johndoe@example.com">
-    </div>
+    <div class="flex-container">
+      <div class="flex-child">
+        <label>Email</label> <br>
+        <input class="inputField" type="email" name="patientEmail" placeholder="johndoe@example.com">
+      </div>
 
-    <div>
-      <label>Phone Number</label> <br>
-      <input class="inputField" type="tel" name="patientPhoneNumber" placeholder="+254 712 345 678">
+      <div class="flex-child">
+        <label>Phone Number</label> <br>
+        <input class="inputField" type="tel" name="patientPhoneNumber" placeholder="+254 712 345 678">
+      </div>
     </div>
 
     <div>
       <label>Which one(s) do you prefer to be contacted by:</label> <br>
-      <input id="phone" type="radio" name="preferredContactMethod" value="phone">
+      <input id="phone" type="radio" name="preferredContactMethod" value="Phone">
       <label for="phone">Phone</label>
-      <input id="sms" type="radio" name="preferredContactMethod" value="sms">
+      <input id="sms" type="radio" name="preferredContactMethod" value="SMS">
       <label for="sms">SMS</label>
-      <input id="email" type="radio" name="preferredContactMethod" value="email">
+      <input id="email" type="radio" name="preferredContactMethod" value="Email">
       <label for="email">Email</label>
     </div>
 
     <!-- Kin Section -->
-    <h3>Next of Kin/Contact Person</h3>
+    <h3>Next of Kin/Contact Person Information</h3>
 
-    <div>
-      <label>Name</label> <br>
-      <input class="inputField" type="text" name="kinFName" placeholder="First Name">
-      <input class="inputField" type="text" name="kinLName" placeholder="Last Name">
+    <div class="flex-container">
+      <div class="flex-child">
+        <label>Name</label> <br>
+        <input class="inputField" type="text" name="kinName" placeholder="John Doe">
+      </div>
+
+      <div class="flex-child">
+        <label>Relationship to Patient</label> <br>
+        <input class="inputField" type="text" name="kinRelationship" placeholder="Mother, Father, Son, Daughter, etc.">
+      </div>
     </div>
 
-    <div>
-      <label>Relationship to Patient</label> <br>
-      <input class="inputField" type="text" name="kinRelationship" placeholder="Mother, Father, Son, Daughter, etc.">
+    <div class="flex-container">
+      <div class="flex-child">
+        <label>Email</label> <br>
+        <input class="inputField" type="email" name="kinEmail" placeholder="johndoe@example.com">
+      </div>
+
+      <div class="flex-child">
+        <label>Phone Number</label> <br>
+        <input class="inputField" type="tel" name="kinPhoneNumber" placeholder="+254 712 345 678">
+      </div>
     </div>
 
-    <div>
-      <label>Email</label> <br>
-      <input class="inputField" type="email" name="kinEmail" placeholder="johndoe@example.com">
-    </div>
-
-    <div>
-      <label>Phone Number</label> <br>
-      <input class="inputField" type="tel" name="kinPhoneNumber" placeholder="+254 712 345 678">
-    </div>
 
     <!-- Final Section -->
     <h3>Agreement</h3>
 
     <div>
-      <input id="tsandcs" type="checkbox" name="tsandcs" value="agreed">
-      <label for="tsandcs">I agree to Terms and Conditions</label>
-    </div>
-
-    <div>
-      <label>Today's Date</label> <br>
-      <input class="inputField" type="date" name="todaysDate">
-    </div>
-
-    <div>
       <label>Signature</label> <br>
       <textarea name="signature" rows="3"
         placeholder="I, [PATIENT NAME] confirm that the information provided is accurate."></textarea>
+    </div>
+
+    <div>
+      <input id="tsandcs" type="checkbox" name="tsandcs" value="agreed">
+      <label for="tsandcs">I agree to Terms and Conditions</label>
     </div>
 
     <div>
